@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- Navigation -->
+  <header class="bg-gray-100 border-b border-gray-300 sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold"><strong>My Portfolio</strong></a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-gray-50 border-t border-gray-200">
+      <a href="#about" class="block py-2">About</a>
+      <a href="#skills" class="block py-2">Skills</a>
+      <a href="#projects" class="block py-2">Projects</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    
+    <!-- About Section -->
+    <section id="about" class="text-center md:text-left md:flex md:items-center mb-16">
+      <img src="anikaa.jpg" alt="Anika" class="w-48 h-48 rounded-full mx-auto md:mr-8"/>
+      <div>
+        <h1 class="text-4xl font-bold mb-2">Hi, I'm <span class="text-blue-600">Anika</span></h1>
+        <p class="text-lg text-gray-700 mb-4">
+          I'm an enthusiastic web developer passionate about clean design and functional code.
+        </p>
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mb-16">
+      <h2 class="text-3xl font-bold text-center mb-6">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white border p-4">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Languages</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C Programming</li>
+          </ul>
+        </div>
+        <div class="bg-white border p-4">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Tools</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>GitHub</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+        <div class="bg-white border p-4">
+          <h3 class="text-xl font-semibold text-blue-600 mb-2">Concepts</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Responsive Design</li>
+            <li>Web Development</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="mb-16">
+      <h2 class="text-3xl font-bold text-center mb-6">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Project 1 -->
+        <div class="bg-white border p-4">
+          <img src="tea cup.jpg" alt="The Story Mug" class="w-full h-40 object-cover mb-4"/>
+          <h3 class="text-xl font-semibold mb-2">The Story Mug</h3>
+          <p class="text-gray-700 mb-3">
+            A storytelling-themed website built with HTML, CSS, and JavaScript. It showcases structured design and visual elements.
+          </p>
+          <a href="https://anikarajesh05.github.io/the-story-mug/" target="_blank" class="text-blue-600 hover:underline mr-4">🌐 Live Project</a>
+          <a href="https://github.com/Anikarajesh05/the-story-mug" target="_blank" class="text-gray-700 hover:text-black underline">📁 GitHub Repo</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white border p-4">
+          <img src="varkkala.jpg" alt="Trivandrum Tourism" class="w-full h-40 object-cover mb-4"/>
+          <h3 class="text-xl font-semibold mb-2">Trivandrum Tourism</h3>
+          <p class="text-gray-700 mb-3">
+            A tourism-based site highlighting Trivandrum's culture and attractions. Built with responsive design for all devices.
+          </p>
+          <a href="https://anikarajesh05.github.io/trivandrum-tourism/" target="_blank" class="text-blue-600 hover:underline mr-4">🌐 Live Project</a>
+          <a href="http://github.com/Anikarajesh05/trivandrum-tourism" target="_blank" class="text-gray-700 hover:text-black underline">📁 GitHub Repo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mb-16">
+      <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+      <div class="max-w-xl mx-auto">
+        <form class="space-y-4">
+          <input type="text" id="name" placeholder="Your Name" class="w-full border px-4 py-2" required />
+          <input type="email" id="email" placeholder="Your Email" class="w-full border px-4 py-2" required />
+          <textarea id="message" rows="4" placeholder="Your Message" class="w-full border px-4 py-2" required></textarea>
+          <button type="submit" class="w-full bg-blue-600 text-white py-2 hover:bg-blue-700">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>&copy; 2025 Anika Rajesh. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Interactions -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contact form submit
+    const contactForm = document.querySelector('#contact form');
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for contacting me! (This is a demo — no message sent)');
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
